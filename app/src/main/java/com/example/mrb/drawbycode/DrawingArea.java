@@ -69,7 +69,33 @@ public class DrawingArea extends View // You need to extend the View class
 
         super.onDraw(canvas);
 
-        canvas.drawCircle((float)50.0, (float)50.0, (float)50.0, pntGraphicsPaint);
+       /* canvas.drawCircle((float) 300.0, (float) 100.0, (float) 100.0, pntGraphicsPaint);
+        canvas.drawRect((float) 275.0, (float) 550, (float) 350.0, (float) 100.0, pntGraphicsPaint);
+        canvas.drawRect((float)100.0, (float)300.0, (float)550.0, (float)245.0, pntGraphicsPaint);
+        canvas.drawRect((float)100.0, (float)300.0, (float)150.0, (float)125.0, pntGraphicsPaint);
+        canvas.drawRect((float)500, (float)300.0, (float)550.0, (float)125.0, pntGraphicsPaint);
+        canvas.drawCircle((float)200.0, (float)250.0, (float)40.0, pntGraphicsPaint);
+        canvas.drawCircle((float)450.0, (float)250.0, (float)40.0, pntGraphicsPaint);
+
+
+        for (int i = 0; i <= canvas.getHeight(); i++) {
+            canvas.drawRect((float) 0, (float)i*100, (float) canvas.getWidth(), (float) i*100 + 25, pntGraphicsPaint);
+            canvas.drawRect((float) i*100, (float) 0, (float) i*100 + 25, (float) canvas.getHeight(), pntGraphicsPaint);
+        }
+        */
+
+        for (int i = 0; i <= canvas.getHeight(); i+=100) {
+            for (int b = 0; b <= canvas.getHeight(); b++) {
+                canvas.drawRect((float) i, (float) b*100, (float) i + 50, (float) b*100 + 50, pntGraphicsPaint);
+            }
+            for (int c = 0; c <= canvas.getHeight(); c++) {
+                canvas.drawRect((float) i + 50, (float) c*100 + 50, (float) i + 100, (float) c*100 + 100, pntGraphicsPaint);
+            }
+        }
+
+
+
+
 
 
     }
